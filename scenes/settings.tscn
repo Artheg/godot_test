@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/settings.gd" type="Script" id=2]
+
+[node name="panel_root" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.5
+margin_top = -194.5
+margin_right = 82.5
+margin_bottom = 194.5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox_items_container" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.5
+margin_top = -171.0
+margin_right = 54.5
+margin_bottom = 171.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox_settings_container" type="VBoxContainer" parent="vbox_items_container"]
+margin_right = 109.0
+margin_bottom = 318.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="vbox_items_container/vbox_settings_container"]
+margin_right = 109.0
+margin_bottom = 24.0
+custom_constants/separation = 4
+
+[node name="Label" type="Label" parent="vbox_items_container/vbox_settings_container/HBoxContainer"]
+margin_top = 5.0
+margin_right = 81.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Music"
+
+[node name="CheckBox" type="CheckBox" parent="vbox_items_container/vbox_settings_container/HBoxContainer"]
+margin_left = 85.0
+margin_right = 109.0
+margin_bottom = 24.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="vbox_items_container/vbox_settings_container"]
+margin_top = 28.0
+margin_right = 109.0
+margin_bottom = 52.0
+
+[node name="Label" type="Label" parent="vbox_items_container/vbox_settings_container/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 81.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "SFX"
+
+[node name="CheckBox" type="CheckBox" parent="vbox_items_container/vbox_settings_container/HBoxContainer2"]
+margin_left = 85.0
+margin_right = 109.0
+margin_bottom = 24.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="vbox_items_container/vbox_settings_container"]
+margin_top = 56.0
+margin_right = 109.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="vbox_items_container/vbox_settings_container/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 81.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Music"
+
+[node name="CheckBox" type="CheckBox" parent="vbox_items_container/vbox_settings_container/HBoxContainer3"]
+margin_left = 85.0
+margin_right = 109.0
+margin_bottom = 24.0
+
+[node name="btn_close" type="Button" parent="vbox_items_container"]
+margin_top = 322.0
+margin_right = 109.0
+margin_bottom = 342.0
+text = "Close"
+[connection signal="pressed" from="vbox_items_container/btn_close" to="." method="_close"]
